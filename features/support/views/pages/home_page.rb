@@ -23,7 +23,8 @@ class HomePage
         end
         
         def link_instagram
-        
+            
+
             link_instagram = find("a[type='instagram']")
             return link_instagram
         end

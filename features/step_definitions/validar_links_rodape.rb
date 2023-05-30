@@ -7,6 +7,7 @@ Quando('clicar no link do Facebook') do
 end
   
 Então('sou redirecionado para a pagina do facebook') do
+        sleep 5
         @shared.troca_janela
         expect(current_url).to eql 'https://www.facebook.com/PrintiBR/'
         @mensagem = @printi_facebook.getNomePrinti
@@ -19,6 +20,7 @@ Quando('clicar no link do Twitter') do
 end
   
 Então('sou redirecionado para a pagina do Twitter') do
+    sleep 5
     @shared.troca_janela
     expect(current_url).to eql 'https://twitter.com/Printi'
     @mensagem = @printi_twitter.getNomePrinti
@@ -30,10 +32,11 @@ Quando('clicar no link do Linkedin') do
 end
  
 Então('sou redirecionado para a pagina do Linkedin') do
+    sleep 5
     @shared.troca_janela
     expect(current_url).to eql 'https://www.linkedin.com/company/printi?original_referer='
     @mensagem = @printi_linkedin.getNomePrinti
-    expect(@mensagem).to eql "Sign in to see who you already know at Printi"
+    expect(@mensagem).to eql "Entre para ver quem você já conhece na organização Printi - uma empresa do grupo Cimpress"
     
 end
   
@@ -46,10 +49,12 @@ Então('sou redirecionado para a pagina do Instagram') do
 end
 
 Quando('clicar no link do pinterest') do
+    sleep 2
     @home_page.link_pinterest.click
 end
   
 Então('sou redirecionado para a pagina do pinterest') do
+    sleep 10
     @shared.troca_janela
     expect(current_url).to eql 'https://br.pinterest.com/printi/'
     @mensagem = @printi_pinterest.getNomePrinti
@@ -62,6 +67,7 @@ Quando('clicar no link do medium') do
 end
   
 Então('sou redirecionado para a pagina do medium') do
+    sleep 5
     @shared.troca_janela
     expect(current_url).to eql 'https://medium.com/printi-tech'
     @mensagem = @printi_medium.getNomePrinti
