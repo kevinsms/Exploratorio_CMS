@@ -1,6 +1,6 @@
 ---
-default: --profile pretty -p homolog -p html
+default: --profile pretty -p stage -p html
 pretty: --format pretty
 homolog: AMBIENTE=homolog
-producao: AMBIENTE=producao 
+stage: AMBIENTE=stage 
 html: --format html --out=reports/relatorio.html

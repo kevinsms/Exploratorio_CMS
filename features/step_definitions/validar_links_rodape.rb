@@ -37,11 +37,12 @@ Então('sou redirecionado para a pagina do Linkedin') do
 end
   
 Quando('clicar no link do Instagram') do
-    pending # Write code here that turns the phrase above into concrete actions
+    @home_page.link_instagram.click
 end
   
 Então('sou redirecionado para a pagina do Instagram') do
-    pending # Write code here that turns the phrase above into concrete actions
+    @shared.troca_janela
+    expect(current_url).to eql 'https://www.linkedin.com/company/printi?original_referer='
 end
 
 Quando('clicar no link do pinterest') do

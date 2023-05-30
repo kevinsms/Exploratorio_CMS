@@ -1,6 +1,19 @@
 class HomePage
     include Capybara::DSL
-    
+
+        def open
+        
+            visit "/"
+        
+        end
+
+        def aceitar_cookie_banner
+
+            page.has_css?("div[type='default']", wait: 15)
+            click_button 'Concordar e fechar'
+        
+        end
+
         def link_facebook
 
             page.has_css?("a[type='facebook']", wait: 15)
@@ -49,15 +62,4 @@ class HomePage
 
         end
         
-        def open
-            visit "/"
-        end
-
-
-        def aceitar_cookie_banner
-
-            page.has_css?("div[type='default']", wait: 15)
-            click_button 'Concordar e fechar'
-        
-        end
 end
