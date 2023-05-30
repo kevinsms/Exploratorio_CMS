@@ -44,13 +44,5 @@ Funcionalidade: Links redes sociais no rodape
         Quando clicar no link do medium
         Então sou redirecionado para a pagina do medium
 
-        # Exemplos:
-        #     | rede_social | verifica_pagina                         |
-        #     | facebook    | https://www.facebook.com/PrintiBR/      |
-        #     | Twitter     | https://twitter.com/Printi              |
-        #     | Linkedin    | https://www.linkedin.com/company/printi |
-        #     | Instagram   | https://www.instagram.com/printibr/     |
-        #     | pinterest   | https://br.pinterest.com/printi/        |
-        #     | medium      | https://medium.com/printi-tech          |
 
 
